@@ -25,7 +25,12 @@
 #import <SafariServices/SafariServices.h>
 #import <AuthenticationServices/AuthenticationServices.h>
 
+#if SWIFT_PACKAGE
+@import AppAuthCore;
+#else
 #import "OIDErrorUtilities.h"
+#endif
+
 #import "OIDExternalUserAgentSession.h"
 #import "OIDExternalUserAgentRequest.h"
 
